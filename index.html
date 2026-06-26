@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Val Lanches</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Trailer da Val</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lanches">Lanches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pasteis">Pastéis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#bebidas">Bebidas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="hero vh-100 d-flex align-items-center justify-content-center text-center text-white"
+      style="
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+          url(&quot;assets/img/foto.png&quot;);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <h1 class="display-3 display-md-2 fw-bold mb-3">Val Lanches</h1>
+            <p class="lead fs-4 mb-4">
+              Lanches e pastéis rápidos feitos na hora
+            </p>
+
+            <h2
+              class="botao-cardapio"
+              onclick="
+                document
+                  .getElementById('lanches')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Ver Cardápio
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="container py-5">
+      <h2 class="mb-4 text-center">Sobre o Trailer da Val</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="p-4 bg-light rounded shadow-sm">
+            <p>
+              <strong>Trailer da Val</strong> é um ponto de lanches em frente ao
+              SENAC, conhecido pelo atendimento rápido e pela qualidade dos
+              alimentos preparados na hora.
+            </p>
+            <p>
+              Trabalhamos com lanches, pastéis e bebidas, sempre com sabor
+              caseiro e atendimento acolhedor.
+            </p>
+            <p>
+              Nosso objetivo é oferecer uma experiência simples, acessível e
+              saborosa para toda a comunidade.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lanches" class="container py-5">
+      <h2 class="mb-4">Lanches</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1550547660-d9450f859349"
+              class="card-img-top"
+              alt="X-Burguer"
+            />
+            <div class="card-body">
+              <h3 class="card-title">X-Burguer</h3>
+              <p class="card-text">
+                Hambúrguer com queijo, ovo, alface, milho, tomate, salsinha e
+                molho especial.
+              </p>
+
+              <h4
+                class="botao-pedido"
+                onclick="fazerPedido('Quero uma garrafa de agua')"
+              >
+                Fazer Pedido
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1612392166886-ee8475b03af2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90JTIwZG9nfGVufDB8fDB8fHww"
+              class="card-img-top"
+              alt="Dogão"
+            />
+
+            <div class="card-body">
+              <h3 class="card-title">Dogão</h3>
+              <p class="card-text">
+                Salsicha, milho, batata palha, alface, frango desfiado e molho
+                especial.
+              </p>
+
+              <h4 class="botao-pedido" onclick="fazerPedido('Quero um Dogão')">
+                Fazer Pedido
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1606755962773-d324e0a13086"
+              class="card-img-top"
+              alt="Lanche Duplo"
+            />
+            <div class="card-body">
+              <h3 class="card-title">X-Burguer Duplo</h3>
+              <p class="card-text">
+                Dois hambúrgueres com queijo, molho especial e bacon.
+              </p>
+
+              <h4
+                class="botao-pedido"
+                onclick="fazerPedido('Quero um X-Burguer Duplo')"
+              >
+                Fazer Pedido
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pasteis" class="container py-5">
+      <h2 class="mb-4">Pastéis</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://assets.unileversolutions.com/recipes-v3/54541-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)"
+              class="card-img-top"
+              alt="Pastel de Carne"
+            />
+
+            <div class="card-body">
+              <h3 class="card-title">Pastel de Carne</h3>
+              <p class="card-text">Recheio de carne bem temperada.</p>
+
+              <h4
+                class="botao-pedido"
+                onclick="fazerPedido('Quero um pastel de carne')"
+              >
+                Fazer Pedido
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://media.istockphoto.com/id/1501170724/pt/foto/melted-cheese-from-a-pastry.jpg?s=612x612&w=0&k=20&c=YH_pSYIrUqtlWR-CrgP0SIw3U5ct2j7qc2tfjGCTz7k="
+              class="card-img-top"
+              alt="Pastel de Queijo"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Pastel de Queijo</h3>
+              <p class="card-text">Queijo derretido com massa dourada.</p>
+
+              <h4
+                class="botao-pedido"
+                onclick="fazerPedido('Quero um pastel de queijo')"
+              >
+                Fazer Pedido
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://media.istockphoto.com/id/1248573147/pt/foto/dry-meat-pastry-on-a-restaurant-table-with-pepper-and-olives.jpg?s=612x612&w=0&k=20&c=rzrwNES4YDxukLx7hkxK3D7JlzrlgleqCv85H1vdf9E="
+              class="card-img-top"
+              alt="Pastel de Calabresa"
+            />
+
+            <div class="card-body">
+              <h3 class="card-title">Pastel de Calabresa</h3>
+
+              <p class="card-text">
+                Pastel frito na hora, crocante de calabresa.
+              </p>
+
+              <h4
+                class="botao-pedido"
+                onclick="fazerPedido('Quero um pastel de calabresa')"
+              >
+                Fazer Pedido
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bebidas" class="container py-5">
+      <h2 class="mb-4">Bebidas</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://images.pexels.com/photos/2775860/pexels-photo-2775860.jpeg"
+              class="card-img-top"
+              alt="Refrigerante"
+            />
+
+            <div class="card-body">
+              <h3 class="card-title">Refrigerante</h3>
+              <p class="card-text">Coca-Cola, Guaraná e outros.</p>
+
+              <h4
+                class="botao-pedido"
+                onclick="fazerPedido('Quero um refrigerante')"
+              >
+                Fazer Pedido
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg"
+              class="card-img-top"
+              alt="Suco Natural"
+            />
+
+            <div class="card-body">
+              <h3 class="card-title">Suco Natural</h3>
+              <p class="card-text">Sucos naturais de laranja e abacaxi.</p>
+
+              <h4 class="botao-pedido" onclick="fazerPedido('Quero um suco')">
+                Fazer Pedido
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg"
+              class="card-img-top"
+              alt="Água"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Água</h3>
+              <p class="card-text">Água mineral gelada e água com gás.</p>
+
+              <h4
+                class="botao-pedido"
+                onclick="fazerPedido('Quero uma garrafa de agua')"
+              >
+                Fazer Pedido
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="container py-5">
+      <h2 class="text-center mb-5">Contato</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card text-center shadow-sm border-0 h-100">
+            <div class="card-body">
+              <h3 class="card-title text-success">WhatsApp</h3>
+              <p class="card-text">
+                Fale direto com a gente e faça seu pedido.
+              </p>
+              <a
+                href="https://wa.me/5511987395327?text=Quero%20fazer%20um%20pedido"
+                target="_blank"
+                class="btn btn-success w-100"
+                >Enviar Mensagem</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card text-center shadow-sm border-0 h-100">
+            <div class="card-body">
+              <h3 class="card-title text-danger">Instagram</h3>
+              <p class="card-text">
+                Veja fotos dos nossos lanches e novidades.
+              </p>
+              <a
+                href="https://instagram.com/"
+                target="_blank"
+                class="btn btn-danger w-100"
+                >Seguir</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card text-center shadow-sm border-0 h-100">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Facebook</h3>
+              <p class="card-text">Acompanhe nossas promoções e novidades.</p>
+              <a
+                href="https://facebook.com/"
+                target="_blank"
+                class="btn btn-primary w-100"
+                >Curtir Página</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>
